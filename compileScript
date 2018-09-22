@@ -1,0 +1,1 @@
+nvcc -std=c++11 -O3 cuda_unifiedMemoryHeat2D.cu -o cuda_unifiedMemoryHeat2D 
