@@ -8,6 +8,7 @@
 #include<cstdlib>
 #include<cstdio>
 #include<cmath>
+#include<string> //for string manipulation
 
 #define pi 4.0*atan(1.0)
 #define blockDim_x 128
@@ -136,8 +137,14 @@ int main()
   cudaDeviceSynchronize();
   
   //ouput result to .csv file
-  ofstream fileOut;
-  fileOut.open("cudaUnifiedMemHeatEq.csv");
+  //ofstream fileOut;
+  //fileOut.open("cudaUnifiedMemHeatEq.csv");
+
+  
+  
+  string fpath = "./dum/cudaUnifiedMemHeatEq.csv";
+  ofstream fileOut(fpath);    
+  
   fileOut<<"x,y,z,T\n";
   for(int i=0; i<nx; ++i){
     for(int j=0; j<ny; ++j){
